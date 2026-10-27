@@ -1,0 +1,6 @@
+{
+  "name": "Nawabs Biryani — Royal Dum Kitchen",
+  "description": "Immersive 3D culinary experience for Nawabs Biryani (నవాబ్స్ బిర్యాని) in Madhurawada, Visakhapatnam. Authentic Hyderabadi Kachchi Gosht Dum Biryani, live hours, reviews, and online ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

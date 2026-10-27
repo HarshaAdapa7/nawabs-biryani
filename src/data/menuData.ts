@@ -1,0 +1,216 @@
+import muttonDumImg from '../assets/images/dish_mutton_dum_biryani_1793019805647.jpg';
+import chickenFryImg from '../assets/images/dish_chicken_fry_biryani_1793019805770.jpg';
+import chicken65Img from '../assets/images/dish_royal_chicken_65_1793019808117.jpg';
+import diningHallImg from '../assets/images/gallery_nawabs_dining_hall_1793019810440.jpg';
+import spicesHandiImg from '../assets/images/gallery_deccan_spices_handi_1793019809994.jpg';
+import type { MenuItem, PlacePhotoItem } from '../types/restaurant';
+
+export const MEDIA_ASSETS = {
+  muttonDumImg,
+  chickenFryImg,
+  chicken65Img,
+  diningHallImg,
+  spicesHandiImg,
+};
+
+export const MENU_ITEMS: MenuItem[] = [
+  {
+    id: 'kachchi-gosht-dum-biryani',
+    name: 'Shahi Kachchi Gosht Mutton Dum Biryani',
+    teluguName: 'షాహీ మటన్ దమ్ బిర్యాని',
+    category: 'dum-biryani',
+    categoryLabel: 'Royal Dum Biryani',
+    description:
+      'Young pasture-raised goat marinated 12 hours in hung curd, raw papaya, and stone-ground potli masala, sealed beneath aged Dawat basmati and Kashmiri saffron in a dough-luted copper handi.',
+    spiceLevel: 'Medium Deccan',
+    prepTime: '45 min slow dum',
+    dietary: 'Non-Veg',
+    price: 380,
+    portions: [
+      { label: 'Single Handi', serves: 'Serves 1', price: 380 },
+      { label: 'Royal Full Handi', serves: 'Serves 2', price: 620 },
+      { label: 'Nawab Family Pack', serves: 'Serves 4–5', price: 1180 },
+    ],
+    image: muttonDumImg,
+    signature: true,
+    plateAccentHex: '#D97706',
+    keyNotes: ['Kashmiri Mongra Saffron', 'Caramelized Birista', 'Mirchi ka Salan & Burani Raita'],
+  },
+  {
+    id: 'nawabs-chicken-fry-biryani',
+    name: 'Nawabs Special Chicken Fry Piece Biryani',
+    teluguName: 'నవాబ్స్ స్పెషల్ చికెన్ ఫ్రై పీస్ బిర్యాని',
+    category: 'dum-biryani',
+    categoryLabel: 'Royal Dum Biryani',
+    description:
+      'Coastal Andhra meets Deccan royalty: ghee-roasted peppercorn chicken joints layered atop fragrant zafrani dum rice, finished with fried cashews, fresh pudina, and roasted garlic salan.',
+    spiceLevel: 'Fiery Andhra',
+    prepTime: '35 min dum + roast',
+    dietary: 'Non-Veg',
+    price: 290,
+    portions: [
+      { label: 'Single Handi', serves: 'Serves 1', price: 290 },
+      { label: 'Royal Full Handi', serves: 'Serves 2', price: 490 },
+      { label: 'Nawab Family Pack', serves: 'Serves 4–5', price: 940 },
+    ],
+    image: chickenFryImg,
+    signature: true,
+    plateAccentHex: '#F4A300',
+    keyNotes: ['Guntur Chilli Roast', 'Aged Long-Grain Basmati', 'Ghee-Toasted Cashews'],
+  },
+  {
+    id: 'hyderabadi-chicken-65',
+    name: 'Charminar Tempered Chicken 65',
+    teluguName: 'చికెన్ 65',
+    category: 'starters',
+    categoryLabel: 'Tandoor & Starters',
+    description:
+      'Crisp boneless chicken morsels wok-tossed in tangy Deccan yoghurt-chilli glaze with crackled curry leaves, slit green chillies, and whole roasted garlic cloves.',
+    spiceLevel: 'Fiery Andhra',
+    prepTime: '15 min wok toss',
+    dietary: 'Non-Veg',
+    price: 260,
+    portions: [
+      { label: 'Regular Skillet', serves: '12 pcs', price: 260 },
+      { label: 'Large Platter', serves: '20 pcs', price: 410 },
+    ],
+    image: chicken65Img,
+    signature: true,
+    plateAccentHex: '#B91C1C',
+    keyNotes: ['Crackled Curry Leaves', 'Roasted Garlic Cloves', 'Deccan Yoghurt Reduction'],
+  },
+  {
+    id: 'zafrani-chicken-dum-biryani',
+    name: 'Nizami Zafrani Chicken Dum Biryani',
+    teluguName: 'నిజామీ చికెన్ దమ్ బిర్యాని',
+    category: 'dum-biryani',
+    categoryLabel: 'Royal Dum Biryani',
+    description:
+      'Classic Hyderabadi kachchi yakhni chicken slow-steamed over glowing charcoal embers with green cardamom, shahi jeera, black stone flower, and pure cow ghee.',
+    spiceLevel: 'Medium Deccan',
+    prepTime: '40 min slow dum',
+    dietary: 'Non-Veg',
+    price: 270,
+    portions: [
+      { label: 'Single Handi', serves: 'Serves 1', price: 270 },
+      { label: 'Royal Full Handi', serves: 'Serves 2', price: 460 },
+      { label: 'Nawab Family Pack', serves: 'Serves 4–5', price: 890 },
+    ],
+    image: chickenFryImg,
+    signature: false,
+    plateAccentHex: '#EAB308',
+    keyNotes: ['Kalpasi Stone Flower', 'Charcoal Ember Dum', 'Boiled Egg & Salan'],
+  },
+  {
+    id: 'subz-nizami-tarkari-biryani',
+    name: 'Subz Nizami Tarkari Dum Biryani',
+    teluguName: 'వెజ్ నిజామీ దమ్ బిర్యాని',
+    category: 'dum-biryani',
+    categoryLabel: 'Royal Dum Biryani',
+    description:
+      'Char-grilled malai paneer, baby potatoes, jackfruit, and garden vegetables marinated in saffron-rosewater curd and sealed under aromatic basmati rice.',
+    spiceLevel: 'Mild Zafrani',
+    prepTime: '30 min slow dum',
+    dietary: 'Veg',
+    price: 240,
+    portions: [
+      { label: 'Single Handi', serves: 'Serves 1', price: 240 },
+      { label: 'Royal Full Handi', serves: 'Serves 2', price: 410 },
+      { label: 'Family Pack', serves: 'Serves 4', price: 760 },
+    ],
+    image: spicesHandiImg,
+    signature: false,
+    plateAccentHex: '#15803D',
+    keyNotes: ['Char-Grilled Malai Paneer', 'Kewra & Rosewater', 'Mint Burani Raita'],
+  },
+  {
+    id: 'apollo-coastal-fish',
+    name: 'Madhurawada Spice Apollo Fish',
+    teluguName: 'అపోలో ఫిష్',
+    category: 'starters',
+    categoryLabel: 'Tandoor & Starters',
+    description:
+      'Velvety boneless seer fish fillets flash-seared with crushed black pepper, ginger juliennes, curry leaf tadka, and coastal lemon butter.',
+    spiceLevel: 'Medium Deccan',
+    prepTime: '16 min',
+    dietary: 'Non-Veg',
+    price: 310,
+    portions: [{ label: 'Chef Plate', serves: '8 fillets', price: 310 }],
+    image: chicken65Img,
+    signature: false,
+    plateAccentHex: '#EA580C',
+    keyNotes: ['Coastal Seer Fillet', 'Tellicherry Pepper', 'Lemon Curry-Leaf Glaze'],
+  },
+  {
+    id: 'shahi-chicken-bone-shorba',
+    name: 'Nawab Marag & Pepper Bone Shorba',
+    teluguName: 'మరగ్ బోన్ సూప్',
+    category: 'soups-curries',
+    categoryLabel: 'Bone Soups & Curries',
+    description:
+      'Slow-simmered 6-hour chicken & lamb bone broth infused with crushed black pepper, almond-cashew paste, turmeric, and fresh coriander leaves.',
+    spiceLevel: 'Medium Deccan',
+    prepTime: 'Simmered daily',
+    dietary: 'Non-Veg',
+    price: 160,
+    portions: [{ label: 'Piping Bowl', serves: '250 ml', price: 160 }],
+    image: muttonDumImg,
+    signature: false,
+    plateAccentHex: '#B45309',
+    keyNotes: ['6-Hour Simmered Broth', 'Crushed Black Pepper', 'Lagan Mirchi Pairing'],
+  },
+  {
+    id: 'double-ka-meetha-shahi-tukda',
+    name: 'Zafrani Double Ka Meetha & Irani Chai',
+    teluguName: 'డబుల్ కా మీఠా & ఇరానీ చాయ్',
+    category: 'desserts-chai',
+    categoryLabel: 'Desserts & Chai',
+    description:
+      'Ghee-toasted brioche soaked in reduced saffron-cardamom rabri with slivered pistachios, paired with slow-brewed khoya Irani chai.',
+    spiceLevel: 'Mild Zafrani',
+    prepTime: 'Served warm',
+    dietary: 'Veg',
+    price: 150,
+    portions: [
+      { label: 'Dessert & Chai Duo', serves: 'Serves 1', price: 150 },
+      { label: 'Double Ka Meetha Box', serves: 'Serves 2', price: 220 },
+    ],
+    image: diningHallImg,
+    signature: false,
+    plateAccentHex: '#F59E0B',
+    keyNotes: ['Saffron Khoya Rabri', 'Roasted Pistachio Slivers', 'Osmania Irani Chai'],
+  },
+];
+
+export const FALLBACK_GALLERY_PHOTOS: PlacePhotoItem[] = [
+  {
+    id: 'local-gal-1',
+    url: diningHallImg,
+    caption: 'Evening Dastarkhwan Hall — Brass Pendants & Walnut Seating, Madhurawada',
+    credit: 'Nawabs Biryani Archive',
+  },
+  {
+    id: 'local-gal-2',
+    url: muttonDumImg,
+    caption: 'Hammered Copper Handi — Shahi Kachchi Gosht Mutton Dum Biryani',
+    credit: 'Nawabs Biryani Kitchen',
+  },
+  {
+    id: 'local-gal-3',
+    url: spicesHandiImg,
+    caption: 'Stone-Ground Potli Masala — Kashmiri Saffron, Cardamom, Star Anise & Aged Basmati',
+    credit: 'Nawabs Biryani Craft',
+  },
+  {
+    id: 'local-gal-4',
+    url: chickenFryImg,
+    caption: 'Nawabs Special Chicken Fry Piece Biryani with Mirchi ka Salan',
+    credit: 'Nawabs Biryani Kitchen',
+  },
+  {
+    id: 'local-gal-5',
+    url: chicken65Img,
+    caption: 'Charminar Tempered Chicken 65 with Crackled Curry Leaves & Garlic',
+    credit: 'Nawabs Biryani Kitchen',
+  },
+];

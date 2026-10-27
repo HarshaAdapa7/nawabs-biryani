@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-saffron: #F4A300;
+  --color-saffron-light: #FFB92E;
+  --color-maroon: #5A0F1B;
+  --color-maroon-deep: #3A0810;
+  --color-charcoal: #121212;
+  --color-surface: #1A1615;
+  --color-surface-elevated: #221C1A;
+  --color-cream: #FFF4E0;
+  --color-sand: #C9BBA6;
+}
+
+@layer base {
+  html {
+    background-color: #121212;
+    color: #FFF4E0;
+    font-family: var(--font-sans);
+    scroll-behavior: auto;
+    letter-spacing: 0.008em;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #121212;
+    color: #FFF4E0;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+}
+
+/* Marquee animation using compositor-only transform */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Reviews continuous ticker using compositor-only transform */
+@keyframes reviewsScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-reviews-marquee {
+  display: flex;
+  width: max-content;
+  animation: reviewsScroll 46s linear infinite;
+}
+
+.animate-reviews-marquee:hover,
+.animate-reviews-marquee:focus-within {
+  animation-play-state: paused;
+}
+
+/* Preloader & Fallback Steam wisps (transform + opacity only) */
+@keyframes steamRise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scaleX(0.92);
+  }
+  40% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-6px, -36px, 0) scaleX(1.16);
+  }
+}
+
+.steam-wisp-1 {
+  animation: steamRise 3.2s ease-out infinite;
+}
+.steam-wisp-2 {
+  animation: steamRise 3.8s ease-out 0.9s infinite;
+}
+.steam-wisp-3 {
+  animation: steamRise 3.5s ease-out 1.7s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-reviews-marquee,
+  .steam-wisp-1,
+  .steam-wisp-2,
+  .steam-wisp-3 {
+    animation: none !important;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #332926;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F4A300;
+}
